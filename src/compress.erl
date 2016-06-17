@@ -8,10 +8,10 @@
 -export([start_link/0,init/1, command/1, handle_call/3,
   handle_cast/2,handle_info/2,code_change/3,terminate/2]).
 
-%-record(packet_data, {name = <<"">>, fam = <<"">>, city = <<"">>, street = <<"">>}).
-%-record(packet_flags, {ax = <<"0">>, bx = <<"0">>, cx = <<"0">>, dx = <<"">>}).
-%-record(packet1, {portsrc = <<"0">>, portdst = <<"0">>, sernum = <<"0">>, confnum = <<"0">>, length = <<"0">>,
-%  res = <<"0">>, flags = #packet_flags{}, size = <<"0">>, summ = <<"0">>, prior = <<"0">>, data = #packet_data{}}).
+-record(packet_data, {name = <<"">>, fam = <<"">>, city = <<"">>, street = <<"">>}).
+-record(packet_flags, {ax = <<"0">>, bx = <<"0">>, cx = <<"0">>, dx = <<"">>}).
+-record(packet1, {portsrc = <<"0">>, portdst = <<"0">>, sernum = <<"0">>, confnum = <<"0">>, length = <<"0">>,
+  res = <<"0">>, flags = #packet_flags{}, size = <<"0">>, summ = <<"0">>, prior = <<"0">>, data = #packet_data{}}).
 
 start_link() ->
   gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
