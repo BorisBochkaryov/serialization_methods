@@ -1,0 +1,34 @@
+SP DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+
+Packet ::= SEQUENCE
+{
+    portsrc     OCTET STRING,
+    portdst     OCTET STRING,
+    sernum      OCTET STRING,
+    confnum     OCTET STRING,
+    length      OCTET STRING,
+    res         OCTET STRING,
+
+    flags       SEQUENCE
+    {
+        ax          OCTET STRING,
+        bx          OCTET STRING,
+        cx          OCTET STRING,
+        dx          OCTET STRING
+    },
+
+    size        OCTET STRING,
+    summ        OCTET STRING,
+    prior       OCTET STRING,
+
+    data        SEQUENCE
+    {
+        name        OCTET STRING,
+        fam         OCTET STRING,
+        city        OCTET STRING,
+        street      OCTET STRING
+    }
+}
+
+END

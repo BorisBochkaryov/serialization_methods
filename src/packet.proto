@@ -1,0 +1,28 @@
+message Packet {
+  optional string portSrc = 1;
+  optional string portDst = 2;
+  optional string serNum = 3;
+  optional string confNum = 4;
+  optional string length = 5;
+  optional string res = 6;
+  optional Flags flags = 7;
+
+  optional string size = 8;
+  optional string summ = 9;
+  optional string prior = 10;
+  optional Data data = 11;
+}
+
+message Flags {
+  optional string ax = 1;
+  optional string bx = 2;
+  optional string cx = 3;
+  optional string dx = 4;
+}
+
+message Data {
+  optional string name = 1;
+  optional string fam = 2;
+  optional string city = 3;
+  optional string street = 4;
+}

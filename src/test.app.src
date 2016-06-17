@@ -1,0 +1,15 @@
+{application, test,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {erl_opts, [warn_missing_spec]},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  protobuffs,
+		              msgpack
+                 ]},
+  {mod, { test_app, []}},
+  {env, []}
+ ]}.
